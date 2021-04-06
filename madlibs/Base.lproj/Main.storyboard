@@ -42,9 +42,12 @@
                                 <rect key="frame" x="25" y="376" width="365" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="First"/>
+                                    <segment title="Less"/>
                                     <segment title="More"/>
                                 </segments>
+                                <connections>
+                                    <action selector="lessOrMoreValueDidChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="DFz-dS-Kos"/>
+                                </connections>
                             </segmentedControl>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6eY-Xd-CPU">
                                 <rect key="frame" x="25" y="436" width="365" height="314"/>
@@ -63,6 +66,9 @@
                                     <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="45" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="WD6-lT-crH">
                                         <rect key="frame" x="131" y="102" width="228" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="sliderDidChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="UcC-JK-siL"/>
+                                        </connections>
                                     </slider>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1U3-N3-gAD">
                                         <rect key="frame" x="310" y="232" width="49" height="31"/>
@@ -92,6 +98,9 @@
                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Tj2-un-eT1">
                                         <rect key="frame" x="263" y="166" width="94" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="stepperDidChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="rSA-ER-7FP"/>
+                                        </connections>
                                     </stepper>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Happy Ending?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5b-0b-QQw">
                                         <rect key="frame" x="133" y="237" width="115" height="21"/>
@@ -108,9 +117,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Create Story"/>
+                                <connections>
+                                    <action selector="createStoryDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D2y-wz-8s6"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yOc-go-Tts">
-                                <rect key="frame" x="25" y="220" width="365" height="34"/>
+                                <rect key="frame" x="25" y="228" width="365" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -119,10 +131,23 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="1" green="0.8237188229620982" blue="0.39446026381907162" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="ageTextField" destination="x6c-bH-28I" id="rtp-qR-3yg"/>
+                        <outlet property="animalSegmentedControl" destination="HAn-9t-w60" id="M9C-jw-Aga"/>
+                        <outlet property="containerView" destination="6eY-Xd-CPU" id="3Ld-pG-5vR"/>
+                        <outlet property="firstNameTextField" destination="1Lz-Vq-iL4" id="F8a-ma-GE1"/>
+                        <outlet property="happyEndingSwitch" destination="1U3-N3-gAD" id="N8R-h5-7Yo"/>
+                        <outlet property="locationTextField" destination="yOc-go-Tts" id="e30-yB-Vn8"/>
+                        <outlet property="numberLabel" destination="E2P-wp-IMk" id="eMv-ej-SJK"/>
+                        <outlet property="numberOfPetsLabel" destination="7QM-RT-dVM" id="fcL-It-VVI"/>
+                        <outlet property="numberOfPetsStepper" destination="Tj2-un-eT1" id="Bnb-f4-TbT"/>
+                        <outlet property="numberSlider" destination="WD6-lT-crH" id="qHA-OE-Qno"/>
+                        <outlet property="verbTextField" destination="LN5-2A-cek" id="2pt-oj-Swx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="279.71014492753625" y="-17.410714285714285"/>
+            <point key="canvasLocation" x="249" y="-31"/>
         </scene>
     </scenes>
     <resources>
